@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolution Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <h1 class="title">Resolution Calculator</h1>
+        
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="resolution">Resolution</button>
+            <button class="mode-btn" data-mode="aspect">Aspect Ratio</button>
+        </div>
+
+        <div class="calculator resolution-mode">
+            <div class="input-group">
+                <input type="number" id="width" placeholder="1920" class="input-field">
+                <span class="multiply">×</span>
+                <input type="number" id="height" placeholder="1080" class="input-field">
+            </div>
+            <div class="info-text" id="resolutionInfo">Aspect Ratio: 16:9</div>
+            <div class="preview-square" id="previewSquare"></div>
+            <button class="fullscreen-btn" id="fullscreenBtn">
+                <span class="btn-text">Fullscreen</span>
+            </button>
+        </div>
+
+        <div class="calculator aspect-mode hidden">
+            <div class="input-group">
+                <input type="number" id="aspectWidth" placeholder="16" class="input-field">
+                <span class="multiply">:</span>
+                <input type="number" id="aspectHeight" placeholder="9" class="input-field">
+                <input type="number" id="baseSize" placeholder="100" class="input-field base-size" title="Base size in pixels">
+            </div>
+            <div class="info-text" id="aspectInfo">Resolution: 177.78 × 100 px</div>
+            <div class="preview-square" id="aspectPreviewSquare"></div>
+            <button class="fullscreen-btn" id="aspectFullscreenBtn">
+                <span class="btn-text">Fullscreen</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="fullscreen-overlay" id="fullscreenOverlay">
+        <div class="fullscreen-square" id="fullscreenSquare"></div>
+        <button class="exit-btn" id="exitBtn">✕</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
